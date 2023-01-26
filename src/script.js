@@ -44,7 +44,10 @@ const wallAoMap = textureLoader.load('textures/bricks/ambientOcclusion.jpg')
 const grassRoughnessMap = textureLoader.load('textures/grass/roughness.jpg');
 const grassNormalMap = textureLoader.load('textures/grass/normal.jpg');
 const grassColorMap = textureLoader.load('textures/grass/color.jpg');
-const grassAoMap = textureLoader.load('textures/grass/ambientOcclusion.jpg')
+const grassAoMap = textureLoader.load('textures/grass/ambientOcclusion.jpg');
+
+//grave textures
+const graveColorMap = textureLoader.load('textures/Grave/tombstoneColor.jpg')
 
 grassAoMap.repeat.set(8, 8)
 grassNormalMap.repeat.set(8, 8)
@@ -144,7 +147,7 @@ scene.add(graves);
 // graves.castShadow = true;
 
 const graveGeometry = new three.BoxBufferGeometry(0.6, 0.6, 0.2)
-const graveMaterial = new three.MeshStandardMaterial({ color: "#b2b6b1" })
+const graveMaterial = new three.MeshStandardMaterial({ map: graveColorMap })
 for (let i = 0; i < 50; i++) {
     const angle = Math.random() * Math.PI * 2;
     const radius = 3 + Math.random() * 6.5;
