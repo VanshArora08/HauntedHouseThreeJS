@@ -272,6 +272,11 @@ const Lightning = new three.DirectionalLight("#8587ff", 3);
 scene.add(Lightning);
 Lightning.position.set(-15, 10, -20)
 Lightning.castShadow = true;
+Lightning.shadow.camera.right = 10
+Lightning.shadow.camera.left = -10
+
+// const cameraHelper = new three.CameraHelper(Lightning.shadow.camera);
+// scene.add(cameraHelper);
 
 /**
  * Animate
