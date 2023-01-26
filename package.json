@@ -1,6 +1,9 @@
 {
+  "homepage": "http://VanshArora08.github.io/HauntedHouseThreeJS",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
   },
   "dependencies": {
